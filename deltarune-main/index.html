@@ -78,7 +78,7 @@
     updateButton();
 
     function loadChapter(chapter) {
-      fetch(`chapter${chapter}/index.html`).then(res => res.text()).then(html => {
+      fetch(`./chapter${chapter}/index.html`).then(res => res.text()).then(html => {
         gamestarted = true;
         document.documentElement.innerHTML = html;
         document.documentElement.querySelectorAll('script').forEach(oldScript => {
